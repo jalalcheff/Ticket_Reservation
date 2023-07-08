@@ -27,7 +27,7 @@ fun ChipWithIcon(
     content: Color,
     contentText: String,
     strokeColor:Color = Color.White,
-    icon: Int
+    icon: Int = 0
 ){
     Row(
     ) {

@@ -19,14 +19,19 @@ fun TypeOfMoviesSelector(
     container: Color,
     content: Color,
     contentText: String,
-    strokeColor:Color = Color.White
+    strokeColor:Color = Color.White,
+    cardModifier: Modifier = Modifier.padding(end = 8.dp),
+    textModifier:Modifier = Modifier.padding(
+        vertical = 4.dp,
+        horizontal = 16.dp
+    )
     ){
     Card(
         colors = CardDefaults.cardColors(
             containerColor = container,
             contentColor = content,
         ),
-        modifier = Modifier.padding(end = 8.dp),
+        modifier = cardModifier,
         border = BorderStroke(
             1.dp,
             color = strokeColor.copy(alpha = 0.2f)
@@ -34,10 +39,7 @@ fun TypeOfMoviesSelector(
     ) {
         Text(
             text = contentText,
-            modifier = Modifier.padding(
-                vertical = 4.dp,
-                horizontal = 16.dp
-            )
+            modifier = textModifier
         )
     }
 }
