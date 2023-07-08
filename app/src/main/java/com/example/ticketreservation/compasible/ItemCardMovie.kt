@@ -35,7 +35,12 @@ import com.example.ticketreservation.ui.theme.white
 import com.teckiti.R
 
 @Composable
-fun ItemCardMovie(image: Int, imageSize: Float) {
+fun ItemCardMovie(
+    image: Int,
+    movieName: String,
+    imageSize: Float,
+    time: String
+    ) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
@@ -67,12 +72,12 @@ fun ItemCardMovie(image: Int, imageSize: Float) {
 
                 )
                 Text(
-                    text = "2h 23m",
+                    text = time,
                     color = black
                 )
             }
             Text(
-                text = "Fantastic Beast: The secret of Dumbledore",
+                text = movieName,
                 fontSize = 24.sp,
                 color = black,
                 textAlign = TextAlign.Center
@@ -98,5 +103,5 @@ fun ItemCardMovie(image: Int, imageSize: Float) {
 @Preview(widthDp = 360 , heightDp = 620)
 @Composable
 fun PreviewItemCard(){
-    ItemCardMovie(R.drawable.img,0f)
+    ItemCardMovie(R.drawable.img,"",0f,"")
 }

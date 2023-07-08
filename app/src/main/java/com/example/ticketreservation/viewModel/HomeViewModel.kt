@@ -15,7 +15,10 @@ class HomeViewModel: ViewModel() {
     }
 
     private fun fetchImages() {
-        _state.update { it.copy(imageResource = MoviesFakeData.movies) }
+        _state.update { it.copy(movie = MoviesFakeData.movies) }
+    }
+    fun onClickCard(id: Int){
+
     }
 
 }
